@@ -3,66 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E-commerce Webpage</title>
+<title>Top Ecommerce Platforms</title>
 <style>
-  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; }
-  .navbar { background: #333; overflow: hidden; }
-  .navbar a { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; }
-  .navbar a:hover { background-color: #ddd; color: black; }
-  .container { max-width: 1200px; margin: auto; padding: 20px; }
-  .products-section { background: white; padding: 20px; margin-top: 20px; }
-  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-  .product-item { border: 1px solid #ddd; padding: 20px; text-align: center; }
-  .product-item img { max-width: 100%; height: auto; border-bottom: 1px solid #ddd; padding-bottom: 15px; }
-  .product-price { color: #007bff; font-size: 20px; margin: 10px 0; }
-  .contact-form { background: white; padding: 20px; margin-top: 20px; }
-  .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; }
-  .contact-form button { background: #333; color: white; padding: 10px 20px; border: none; cursor: pointer; }
-  .contact-form button:hover { background: #555; }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  .platform-list {
+    list-style: none;
+    padding: 0;
+  }
+  .platform-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .recommendation-badge {
+    display: inline-block;
+    background-color: #008000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  .platform-rating {
+    display: inline-block;
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .get-started-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  .get-started-button:hover {
+    background-color: #0056b3;
+  }
 </style>
 </head>
 <body>
 
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#products">Products</a>
-  <a href="#contact">Contact</a>
+<div class="header">
+  <h1>Best Ecommerce Platforms of 2023</h1>
+  <p>Get up and running in just a few clicks</p>
 </div>
 
-<section id="products" class="products-section">
-  <div class="container">
-    <h2>Our Products</h2>
-    <div class="product-grid">
-      <!-- Product 1 -->
-      <div class="product-item">
-        <img src="product1.jpg" alt="Product 1">
-        <h3>Product 1</h3>
-        <p class="product-price">$19.99</p>
-        <p class="product-info">This is a great product for your needs.</p>
-      </div>
-      <!-- Product 2 -->
-      <div class="product-item">
-        <img src="product2.jpg" alt="Product 2">
-        <h3>Product 2</h3>
-        <p class="product-price">$29.99</p>
-        <p class="product-info">This product is even better for your needs.</p>
-      </div>
-      <!-- More products here -->
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact-form">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+<div class="main-content">
+  <ul class="platform-list">
+    <li class="platform-item">
+      <span class="recommendation-badge">We Recommend</span>
+      <span class="platform-rating">9.5 Excellent</span>
+      <h2>Shopify</h2>
+      <p>Start your 3-day free trial</p>
+      <a href="#" class="get-started-button">Get Started</a>
+    </li>
+    
+    <!-- Repeat for each platform -->
+    
+  </ul>
+</div>
 
 </body>
 </html>
