@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f8;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #007bff 3px solid;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header ul {
+  padding: 0;
+  list-style: none;
+}
+
+header ul li {
+  display: inline;
+  padding: 0 20px;
+}
+
+header #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  margin-left: 15px;
+}
+
+header nav ul li a:hover {
+  border-bottom: #007bff 2px solid;
+}
+
+.home-section, .products-section {
+  padding: 20px 0;
+}
+
+.contact-section {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.contact-section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+#contact-form input, #contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+#contact-form button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background: #0056b3;
+}
