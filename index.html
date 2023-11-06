@@ -3,81 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top Ecommerce Platforms</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .header {
-    background-color: #f8f8f8;
-    padding: 20px;
-    text-align: center;
-  }
-  .main-content {
-    padding: 20px;
-  }
-  .platform-list {
-    list-style: none;
-    padding: 0;
-  }
-  .platform-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  .recommendation-badge {
-    display: inline-block;
-    background-color: #008000;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  .platform-rating {
-    display: inline-block;
-    background-color: #f4f4f4;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  .get-started-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-  }
-  .get-started-button:hover {
-    background-color: #0056b3;
-  }
-</style>
+<title>Ecommerce Website</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="header">
-  <h1>Best Ecommerce Platforms of 2023</h1>
-  <p>Get up and running in just a few clicks</p>
-</div>
+<header>
+  <nav id="navbar">
+    <div class="container">
+      <h1 class="logo">MyEcommerce</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-<div class="main-content">
-  <ul class="platform-list">
-    <li class="platform-item">
-      <span class="recommendation-badge">We Recommend</span>
-      <span class="platform-rating">9.5 Excellent</span>
-      <h2>Shopify</h2>
-      <p>Start your 3-day free trial</p>
-      <a href="#" class="get-started-button">Get Started</a>
-    </li>
-    
-    <!-- Repeat for each platform -->
-    
-  </ul>
-</div>
+<section id="home" class="home-section">
+  <div class="container">
+    <h2>Welcome to MyEcommerce</h2>
+    <p>Find the best products for your needs.</p>
+  </div>
+</section>
+
+<section id="products" class="products-section">
+  <div class="container">
+    <!-- Insert products listing here -->
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <section id="contact" class="contact-section">
+      <h3>Contact Us</h3>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+</footer>
 
 </body>
 </html>
