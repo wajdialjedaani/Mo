@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Calculator</title>
+    <title>Picture Gallery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,24 +25,31 @@
             margin-right: 20px;
         }
 
-        #calculator {
-            max-width: 400px;
+        .gallery {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+        }
+
+        .image {
+            display: inline-block;
+            margin: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #f7f7f7;
+            padding: 10px;
+            text-align: center;
         }
 
-        input[type="text"], input[type="button"] {
-            width: 40px;
-            height: 40px;
-            font-size: 20px;
+        .image img {
+            max-width: 100%;
+            height: auto;
         }
 
-        input[type="text"] {
-            width: 100%;
-            margin-bottom: 10px;
+        .image .like {
+            margin-right: 10px;
+        }
+
+        .image .dislike {
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -50,57 +57,57 @@
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#">Gallery</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
-    <div id="calculator">
-        <input type="text" id="display" readonly>
-        <table>
-            <tr>
-                <td><input type="button" value="7" onclick="appendToDisplay('7')"></td>
-                <td><input type="button" value="8" onclick="appendToDisplay('8')"></td>
-                <td><input type="button" value="9" onclick="appendToDisplay('9')"></td>
-                <td><input type="button" value="/" onclick="appendToDisplay('/')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="4" onclick="appendToDisplay('4')"></td>
-                <td><input type="button" value="5" onclick="appendToDisplay('5')"></td>
-                <td><input type="button" value="6" onclick="appendToDisplay('6')"></td>
-                <td><input type="button" value="*" onclick="appendToDisplay('*')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="1" onclick="appendToDisplay('1')"></td>
-                <td><input type="button" value="2" onclick="appendToDisplay('2')"></td>
-                <td><input type="button" value="3" onclick="appendToDisplay('3')"></td>
-                <td><input type="button" value="-" onclick="appendToDisplay('-')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="C" onclick="clearDisplay()"></td>
-                <td><input type="button" value="0" onclick="appendToDisplay('0')"></td>
-                <td><input type="button" value="=" onclick="calculate()"></td>
-                <td><input type="button" value="+" onclick="appendToDisplay('+')"></td>
-            </tr>
-        </table>
+    <div class="gallery">
+        <div class="image">
+            <img src="image1.jpg" alt="Image 1">
+            <p>
+                <span class="like">👍 0</span>
+                <span class="dislike">👎 0</span>
+            </p>
+        </div>
+
+        <div class="image">
+            <img src="image2.jpg" alt="Image 2">
+            <p>
+                <span class="like">👍 0</span>
+                <span class="dislike">👎 0</span>
+            </p>
+        </div>
+
+        <div class="image">
+            <img src="image3.jpg" alt="Image 3">
+            <p>
+                <span class="like">👍 0</span>
+                <span class="dislike">👎 0</span>
+            </p>
+        </div>
     </div>
 
     <script>
-        function appendToDisplay(value) {
-            document.getElementById('display').value += value;
-        }
+        const images = document.querySelectorAll('.image');
 
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
+        images.forEach(image => {
+            const likeButton = image.querySelector('.like');
+            const dislikeButton = image.querySelector('.dislike');
 
-        function calculate() {
-            try {
-                document.getElementById('display').value = eval(document.getElementById('display').value);
-            } catch (error) {
-                document.getElementById('display').value = 'Error';
-            }
-        }
+            let likes = 0;
+            let dislikes = 0;
+
+            likeButton.addEventListener('click', () => {
+                likes++;
+                likeButton.textContent = `👍 ${likes}`;
+            });
+
+            dislikeButton.addEventListener('click', () => {
+                dislikes++;
+                dislikeButton.textContent = `👎 ${dislikes}`;
+            });
+        });
     </script>
 </body>
 </html>
