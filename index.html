@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Picture Gallery</title>
+    <title>Digital Library</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,31 +25,24 @@
             margin-right: 20px;
         }
 
-        .gallery {
+        .resource-list {
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .image {
-            display: inline-block;
-            margin: 10px;
+        .resource {
+            margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 10px;
-            text-align: center;
         }
 
-        .image img {
-            max-width: 100%;
-            height: auto;
+        .resource h2 {
+            margin: 0;
         }
 
-        .image .like {
-            margin-right: 10px;
-        }
-
-        .image .dislike {
-            margin-left: 10px;
+        .comments {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -57,57 +50,38 @@
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Library</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="gallery">
-        <div class="image">
-            <img src="image1.jpg" alt="Image 1">
-            <p>
-                <span class="like">👍 0</span>
-                <span class="dislike">👎 0</span>
-            </p>
+    <div class="resource-list">
+        <div class="resource">
+            <h2>Resource 1</h2>
+            <p>This is a sample resource description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="comments">
+                <h3>Comments:</h3>
+                <ul>
+                    <li>Student A: This is a great resource!</li>
+                    <li>Student B: I found it very helpful.</li>
+                </ul>
+                <input type="text" placeholder="Add a comment">
+                <button>Add Comment</button>
+            </div>
         </div>
 
-        <div class="image">
-            <img src="image2.jpg" alt="Image 2">
-            <p>
-                <span class="like">👍 0</span>
-                <span class="dislike">👎 0</span>
-            </p>
-        </div>
-
-        <div class="image">
-            <img src="image3.jpg" alt="Image 3">
-            <p>
-                <span class="like">👍 0</span>
-                <span class="dislike">👎 0</span>
-            </p>
+        <div class="resource">
+            <h2>Resource 2</h2>
+            <p>This is another sample resource description. Nulla facilisi.</p>
+            <div class="comments">
+                <h3>Comments:</h3>
+                <ul>
+                    <li>Student C: Thanks for sharing this.</li>
+                </ul>
+                <input type="text" placeholder="Add a comment">
+                <button>Add Comment</button>
+            </div>
         </div>
     </div>
-
-    <script>
-        const images = document.querySelectorAll('.image');
-
-        images.forEach(image => {
-            const likeButton = image.querySelector('.like');
-            const dislikeButton = image.querySelector('.dislike');
-
-            let likes = 0;
-            let dislikes = 0;
-
-            likeButton.addEventListener('click', () => {
-                likes++;
-                likeButton.textContent = `👍 ${likes}`;
-            });
-
-            dislikeButton.addEventListener('click', () => {
-                dislikes++;
-                dislikeButton.textContent = `👎 ${dislikes}`;
-            });
-        });
-    </script>
 </body>
 </html>
