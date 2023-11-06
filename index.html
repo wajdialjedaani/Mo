@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #FBD3E9, #BBDEFD); /* Replace with your preferred colors */
+            background: linear-gradient(135deg, #FBD3E9, #BBDEFD);
             background-attachment: fixed;
             background-size: cover;
             margin: 0;
@@ -33,7 +33,7 @@
         .resource-list {
             max-width: 800px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.8); /* Background for the resource list with transparency */
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
         }
@@ -52,6 +52,11 @@
         .comments {
             margin-top: 10px;
         }
+
+        .library-link {
+            text-decoration: underline;
+            color: #007BFF;
+        }
     </style>
 </head>
 <body>
@@ -65,13 +70,14 @@
 
     <div class="resource-list">
         <div class="resource">
-            <h2>Resource 1</h2>
+            <h2>Library 1</h2>
             <p>This is a sample resource description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Learn more about <a class="library-link" href="https://www.library1example.com" target="_blank">Library 1</a></p>
             <div class="comments">
                 <h3>Comments:</h3>
                 <ul>
-                    <li>Student A: This is a great resource!</li>
-                    <li>Student B: I found it very helpful.</li>
+                    <li>Student A: This is a great library!</li>
+                    <li>Student B: I love it.</li>
                 </ul>
                 <input type="text" placeholder="Add a comment">
                 <button>Add Comment</button>
@@ -79,12 +85,13 @@
         </div>
 
         <div class="resource">
-            <h2>Resource 2</h2>
+            <h2>Library 2</h2>
             <p>This is another sample resource description. Nulla facilisi.</p>
+            <p>Learn more about <a class="library-link" href="https://www.library2example.com" target="_blank">Library 2</a></p>
             <div class="comments">
                 <h3>Comments:</h3>
                 <ul>
-                    <li>Student C: Thanks for sharing this.</li>
+                    <li>Student C: Thanks for sharing this library.</li>
                 </ul>
                 <input type="text" placeholder="Add a comment">
                 <button>Add Comment</button>
